@@ -1,0 +1,14 @@
+.left
+{
+    
+    text-align: left;
+    padding: 30px;
+    background-color: aqua;
+    width: 500px;
+}
+input
+{    
+    padding: 4px;
+    border-radius: 2px;
+   
+}
