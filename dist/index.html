@@ -5,108 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="tampilan.css" />
     <link rel="stylesheet" type="text/css" href="build/build.css">
+      
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="jquery.simple.timer.js"> </script>
     <script>
         var tampungjawaban = new Array;
         var score = 0;
+        
         tampungjawaban[1] = "70";
         tampungjawaban[2] = "-900";
         tampungjawaban[3] = "504";
         tampungjawaban[4] = "25";
-        tampungjawaban[5] = "d";
-        tampungjawaban[6] = "a";
-        tampungjawaban[7] = "c";
-        tampungjawaban[8] = "b";
-        tampungjawaban[9] = "b";
-        tampungjawaban[10] = "c";
-        tampungjawaban[11] = "b";
-        tampungjawaban[12] = "c";
-        tampungjawaban[13] = "a";
-        tampungjawaban[14] = "d";
-        tampungjawaban[15] = "d";
-        tampungjawaban[16] = "a";
-        tampungjawaban[17] = "c";
-        tampungjawaban[18] = "b";
-        tampungjawaban[19] = "b";
-        tampungjawaban[20] = "c";
+        tampungjawaban[5] = "1440000";
+        tampungjawaban[6] = "0,025";
+        tampungjawaban[7] = "10 oktober";
+        tampungjawaban[8] = "15";
+        
         function Engine(question,answer)
         {
             simpan = answer;
         
         }
-        function hitung(question,tanda)
+        
+        function hitung(question,form,soal)
         {
-            
-            if(tanda =="kirim")
-            {
-                if(simpan == tampungjawaban[question])
-                {
-                    score++;
+            if(!isThereAnAnswer(form)){
+                alert('tidak ada jawaban');
+            }
+            else{
+                if(getAnswer(form,soal) == tampungjawaban[question]){
+                     score++;
                     alert("anda benar\nscore anda :  "+score);
                 }
                 else
                     alert("anda salah");
             }
+//            if(tanda =="kirim")
+//            {
+//                if(simpan == tampungjawaban[question])
+//                {
+//                    score++;
+//                    alert("anda benar\nscore anda :  "+score);
+//                }
+//                else
+//                    alert("anda salah");
+//            }
             
         }
-       
         
-    </script>
-      
-       
-    
-       
+    </script>       
   </head>
   <body>
     <article>
-      <section id="soal1">
-          
-          <form class ="left">
-              <b>1. hasil dari 50 + 20 = </b>
-              <br/>
-                <input onclick="Engine(1, this.value)" type ="radio" name ="soal1" value ="60" >60<br>
-                <input onclick="Engine(1, this.value)"  type ="radio" name="soal1" value ="64">64<br>
-                <input onclick="Engine(1, this.value)" type="radio" name ="soal1" value="70" />70<br />
-                <input onclick="Engine(1, this.value)"  type="radio" name="soal1" value="80" />80<br /><br>
-              <a href ="#soal2"><input onclick ="hitung(1,this.value)" type ="button" value="kirim" id ="tombol"></a>
-              
-          </form>
-      </section>
-      <section id ="soal2">
-          <form class ="left">
-              <b>2. hasil dari 100 - 50 * 20 = </b>
-              <br/>
-                <input onclick="Engine(2, this.value)" type ="radio" name ="soal2" value ="1000" >1000<br>
-                <input onclick="Engine(2, this.value)"  type ="radio" name="soal2" value ="-1950">-1950<br>
-                <input onclick="Engine(2, this.value)" type="radio" name ="soal2" value="-900" />-900<br />
-                <input onclick="Engine(2, this.value)"  type="radio" name="soal2" value="d" />400<br /><br>
-              <a href ="#soal3"><input onclick ="hitung(2,this.value)" type ="button" value="kirim" id ="tombol"></a>
-          </form>		
-      </section>
-      <section id="soal3">
-          <form class ="left">
-              <b>3. hasil dari 200 :50 + 100 *10 / 2 =  </b>
-              <br/>
-                <input onclick="Engine(3, this.value)" type ="radio" name ="soal1" value ="504" >504<br>
-                <input onclick="Engine(3, this.value)"  type ="radio" name="soal1" value ="520">520<br>
-                <input onclick="Engine(3, this.value)" type="radio" name ="soal1" value="250" />250<br />
-                <input onclick="Engine(3, this.value)"  type="radio" name="soal1" value="120" />120<br /><br>
-              <a href ="#soal4"><input onclick ="hitung(3,this.value)" type ="button" value="kirim" id ="tombol"></a>
-          </form>
-      </section>
-      <section id ="soal4">
-          <form class ="left">
-              <b>4 . andi mempunyai mangga dan apel sebanyak 50 dan 75. andi ingin membagikannya sama rata kepada teman-temannya. berapa banyak teman yang mendapatkan buah tersebut?  </b>
-              <br/>
-                <input onclick="Engine(4, this.value)" type ="radio" name ="soal2" value ="25" >25<br>
-                <input onclick="Engine(4, this.value)"  type ="radio" name="soal2" value ="150">150<br>
-                <input onclick="Engine(4, this.value)" type="radio" name ="soal2" value="2" />2<br />
-                <input onclick="Engine(4, this.value)"  type="radio" name="soal2" value="3" />3<br /><br>
-              <a href ="#soal6"><input onclick ="hitung(4,this.value)" type ="button" value="kirim" id ="tombol"></a>
-          </form>		
-      </section>
+        <section id="kategori">
+            <a href ="matematika.html">matematika</a>
+            <a href ="inggris.html">Inggris</a>
+            <a href ="#fisika.html">fisika</a> 
+        </section>     
+       
       
     </article>
     <script src="build/build.js"></script>
-      
+    <script>
+        // ex: isThereAnAnswer(form1)
+        function isThereAnAnswer(form){
+            if($(form).find('input:radio:checked').length != 0){
+                return true;
+            }
+            return false;
+        }
+        // ex: isThereAnAnswer(form1,"soal1")
+        function getAnswer(form,soal){
+            if(isThereAnAnswer(form)){
+                return $(form).find('input[name='+soal+']:checked').val();
+            }
+        }
+        
+        $('#matematika').on('click',function(){
+            $('#timer1').startTimer({
+            onComplete:function(){
+                if(isThereAnAnswer(form1)){
+                    
+                }
+                window.location = window.location.origin+window.location.pathname+"#soal2";
+            }
+            });
+        })
+      </script>
   </body>
 </html>

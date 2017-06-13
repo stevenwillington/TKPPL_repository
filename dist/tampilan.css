@@ -1,14 +1,57 @@
+
 .left
 {
     
     text-align: left;
     padding: 30px;
-    background-color: aqua;
     width: 500px;
+    
 }
-input
-{    
-    padding: 4px;
-    border-radius: 2px;
-   
+
+section#kategori
+{
+    background-image: url(image/backgroundmenu.png);
+    background-position: -50px -100px;
+    
 }
+section#kategori a
+{
+    padding: 5px;
+    width: 200px;
+    margin-top: 10px;
+    background-color: blueviolet;
+    color: greenyellow;
+    border-radius: 10px;
+    
+}
+section#kategori a:hover
+{
+    background-color: greenyellow;
+    color: RED;
+    
+}
+.matematika
+{
+    background-image: url(image/backgroundmate.jpg);
+    background-size: 650px;
+}
+.matematika b
+{
+    font-size: 25px;
+}
+
+.matematika a input
+{
+    background-color: aqua;
+    padding: 5px;
+    width: 100px;
+    margin-left: 170px
+}
+.matematika a input:hover
+{
+    background-color: green;
+    color: pink;
+    
+}
+
+
