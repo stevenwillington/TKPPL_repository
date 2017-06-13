@@ -34,24 +34,81 @@ section#kategori a:hover
 {
     background-image: url(image/backgroundmate.jpg);
     background-size: 650px;
+    color : darkblue;
 }
 .matematika b
 {
     font-size: 25px;
+    color :aqua;
 }
 
 .matematika a input
 {
-    background-color: aqua;
+    background-color: salmon;
     padding: 5px;
     width: 100px;
-    margin-left: 170px
+    margin-left: 170px;
+    color: yellow;
 }
 .matematika a input:hover
 {
     background-color: green;
-    color: pink;
-    
+    color: pink;   
 }
-
+.fisika
+{
+    background-image: url(image/backgroundfisika.png);
+    background-size: 500px;
+    color: purple;
+}
+.fisika b
+{
+    color :aqua;
+    font-size: 20px;
+}
+.fisika a input
+{
+    background-color: yellow;
+    padding: 5px;
+    width: 100px;
+    margin-left: 170px;
+    color: red;
+}
+.fisika a input:hover
+{
+    background-color: blue;
+    color: pink;
+    border: 50px;
+}
+.inggris
+{
+    background-image: url(image/backgroundenglish.jpg);
+    background-size: 600px;
+    color : chocolate;
+}
+.inggris b
+{
+    color :blue;
+    font-size: 20px;
+}
+.inggris a input
+{
+    background-color: green;
+    padding: 5px;
+    width: 100px;
+    margin-left: 170px;
+    color: pink;
+}
+.inggris a input:hover
+{
+    background-color: blue;
+    color: yellow;
+    border: 50px;
+}
+#hasil
+{
+    background-image: url(image/score.jpg);
+    background-size: 630px;
+    color: greenyellow;
+}
 

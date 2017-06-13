@@ -4,56 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="tampilan.css" />
-    <link rel="stylesheet" type="text/css" href="build/build.css">
-      
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="jquery.simple.timer.js"> </script>
-    <script>
-        var tampungjawaban = new Array;
-        var score = 0;
-        
-        tampungjawaban[1] = "70";
-        tampungjawaban[2] = "-900";
-        tampungjawaban[3] = "504";
-        tampungjawaban[4] = "25";
-        tampungjawaban[5] = "1440000";
-        tampungjawaban[6] = "0,025";
-        tampungjawaban[7] = "10 oktober";
-        tampungjawaban[8] = "15";
-        
-        function Engine(question,answer)
-        {
-            simpan = answer;
-        
-        }
-        
-        function hitung(question,form,soal)
-        {
-            if(!isThereAnAnswer(form)){
-                alert('tidak ada jawaban');
-            }
-            else{
-                if(getAnswer(form,soal) == tampungjawaban[question]){
-                     score++;
-                    alert("anda benar\nscore anda :  "+score);
-                }
-                else
-                    alert("anda salah");
-            }
-//            if(tanda =="kirim")
-//            {
-//                if(simpan == tampungjawaban[question])
-//                {
-//                    score++;
-//                    alert("anda benar\nscore anda :  "+score);
-//                }
-//                else
-//                    alert("anda salah");
-//            }
-            
-        }
-        
-    </script>       
+    <link rel="stylesheet" type="text/css" href="build/build.css">      
   </head>
   <body>
     <article>
@@ -62,35 +13,7 @@
             <a href ="inggris.html">Inggris</a>
             <a href ="#fisika.html">fisika</a> 
         </section>     
-       
-      
     </article>
-    <script src="build/build.js"></script>
-    <script>
-        // ex: isThereAnAnswer(form1)
-        function isThereAnAnswer(form){
-            if($(form).find('input:radio:checked').length != 0){
-                return true;
-            }
-            return false;
-        }
-        // ex: isThereAnAnswer(form1,"soal1")
-        function getAnswer(form,soal){
-            if(isThereAnAnswer(form)){
-                return $(form).find('input[name='+soal+']:checked').val();
-            }
-        }
-        
-        $('#matematika').on('click',function(){
-            $('#timer1').startTimer({
-            onComplete:function(){
-                if(isThereAnAnswer(form1)){
-                    
-                }
-                window.location = window.location.origin+window.location.pathname+"#soal2";
-            }
-            });
-        })
-      </script>
+      <script src="build/build.js"></script>
   </body>
 </html>
