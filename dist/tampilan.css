@@ -10,13 +10,8 @@
 
 section#kategori
 {
-<<<<<<< HEAD
     background-image: url(image/background_menu_pelajaran.jpg);
-=======
-    background-image: url(image/backgroundmenu.png);
     background-position: -50px -100px;
->>>>>>> a382b38e83d945971568e2e12221888dbe35730b
-    
 }
 section#kategori a
 {
@@ -26,13 +21,11 @@ section#kategori a
     background-color: blueviolet;
     color: greenyellow;
     border-radius: 10px;
-    
 }
 section#kategori a:hover
 {
     background-color: greenyellow;
     color: RED;
-    
 }
 .matematika
 {
@@ -43,19 +36,16 @@ section#kategori a:hover
 .matematika b
 {
     font-size: 25px;
-<<<<<<< HEAD
     color :mediumvioletred;
 }
 #kelompok
 {
     background-image: url(image/background_menu_utama.jpg);
     background-size: 500px;
-    
 }
 #kelompok h2
 {
     color: chartreuse;
-    
 }
 #kelompok h3
 {
@@ -64,14 +54,8 @@ section#kategori a:hover
 }
 #kelompok p
 {
-    color: aqua;
-    
-}
-=======
     color :aqua;
 }
-
->>>>>>> a382b38e83d945971568e2e12221888dbe35730b
 .matematika a input
 {
     background-color: salmon;
@@ -84,7 +68,6 @@ section#kategori a:hover
 {
     background-color: green;
     color: pink;   
-<<<<<<< HEAD
 }
 .fisika
 {
@@ -207,8 +190,6 @@ img
 {
     background-color: tomato;
     color: darkturquoise;
-    
-=======
 }
 .fisika
 {
@@ -265,6 +246,5 @@ img
     background-image: url(image/score.jpg);
     background-size: 630px;
     color: greenyellow;
->>>>>>> a382b38e83d945971568e2e12221888dbe35730b
 }
 
