@@ -50,11 +50,12 @@ section#kategori a:hover
 #kelompok h3
 {
     border-color: aqua;
-    color: darkmagenta;
+    color: white;
+    font-weight: 600;
 }
 #kelompok p
 {
-    color :aqua;
+    color :yellow;
 }
 .matematika a input
 {
@@ -72,8 +73,8 @@ section#kategori a:hover
 .fisika
 {
     background-image: url(image/backgroundfisika.png);
-    background-size: 900px;
-    background-position: 100px 60px;
+    background-size: 1000px;
+    background-position: 170px 70px;
     color: greenyellow;
 }
 .fisika b
@@ -243,7 +244,7 @@ img
 }
 #hasil
 {
-    background-image: url(image/score.jpg);
+    background-image: url(image/background_hasil.jpg);
     background-size: 630px;
     color: greenyellow;
 }

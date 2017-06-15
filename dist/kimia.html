@@ -39,13 +39,34 @@
             }
             
         }
+         var j =1;
+        var k =2;
+        var time = 10;
+            function countdown(tanda) {
+                var i = document.getElementById('counter'+j);
+                
+                if (time==0 || tanda =="next") {
+                    if(k<9)
+                    {
+                        location.href ='#soalkimia'+k;
+                        k++;
+                        j++;
+                        time =10;
+                    }
+                    else
+                        location.href ='#hasil';
+                }
+                
+                i.innerHTML = time--;
+            }
+            var interval = setInterval(function(){ countdown(); },1000);
     </script>
   </head>
   <body>
     <article>
        
       <section id ="soalkimia1" class="kimia">
-          
+          <p>you will be redirect to next question in <span id="counter1">10</span> second(s).</p>
           <form  class ="left">             
               <b>1. Zat yang tidak dapat diuraikan lagi menjadi zat yang lebih sederhana melalui reaksi kimia biasa disebut... </b>
               <br/>
@@ -53,11 +74,12 @@
                 <input onclick="Engine(1, this.value)"  type ="radio" name="kimia1" value ="molekul">molekul<br>
                 <input onclick="Engine(1, this.value)" type="radio" name ="kimia1" value="senyawa" />senyawa<br />
                 <input onclick="Engine(1, this.value)"  type="radio" name="kimia1" value="atom" />atom<br /><br>
-              <a href ="#soalkimia2"><input onclick ="hitung(1,this.value)" type ="button" value="next" id ="tombol"></a>
+              <a><input onclick ="hitung(1,this.value),countdown(this.value)" type ="button" value="next" id ="tombol"></a>
               
           </form>
       </section>
       <section id="soalkimia2" class="kimia">
+          <p>you will be redirect to next question in <span id="counter2">10</span> second(s).</p>
           <form class ="left">
               
               <b>2. Sebuah atom memiliki jumlah elektron 7 dan nomor massanya 19. Berapakah jumlah neutron pada atom tersebut?</b>
@@ -66,10 +88,11 @@
                 <input onclick="Engine(2, this.value)"  type ="radio" name="kimia2" value ="19">  19<br>
                 <input onclick="Engine(2, this.value)" type="radio" name ="kimia2" value="12" />  12<br />
                 <input onclick="Engine(2, this.value)"  type="radio" name="kimia2" value="10" />  10<br /><br>
-              <a href ="#soalkimia3"><input onclick ="hitung(2,this.value)" type ="button" value="next" id ="tombol"></a>
+              <a><input onclick ="hitung(2,this.value),countdown(this.value)" type ="button" value="next" id ="tombol"></a>
           </form>		
       </section>
       <section id="soalkimia3" class="kimia">
+          <p>you will be redirect to next question in <span id="counter3">10</span> second(s).</p>
           <form class ="left">
            
               <b>3. berikut ini merupakan sifat fisika dari suatu zat, kecuali ...</b>
@@ -78,10 +101,11 @@
                 <input onclick="Engine(3, this.value)"  type ="radio" name="kimia3" value ="rasa">  rasa<br>
                 <input onclick="Engine(3, this.value)" type="radio" name ="kimia3" value="mudah terbakar" />  mudah terbakar<br />
                 <input onclick="Engine(3, this.value)"  type="radio" name="kimia3" value="ukuran" />  ukuran<br /><br>
-              <a href ="#soalkimia4"><input onclick ="hitung(3,this.value)" type ="button" value="next" id ="tombol"></a>
+              <a><input onclick ="hitung(3,this.value),countdown(this.value)" type ="button" value="next" id ="tombol"></a>
           </form>
       </section>
       <section id ="soalkimia4" class="kimia">
+          <p>you will be redirect to next question in <span id="counter4">10</span> second(s).</p>
           <form class ="left">
            
               <b>4. perubahan wujud margarin dari padat menjadi cair di sebut... </b>
@@ -90,11 +114,11 @@
                 <input onclick="Engine(4, this.value)"  type ="radio" name="kimia4" value ="membeku">  membeku<br>
                 <input onclick="Engine(4, this.value)" type="radio" name ="kimia4" value="menyublim" />  menyublim<br />
                 <input onclick="Engine(4, this.value)"  type="radio" name="kimia4" value="menguap" />  menguap<br /><br>
-              <a href ="#soalkimia5"><input onclick ="hitung(4,this.value)" type ="button" value="next" id ="tombol"></a>
+              <a><input onclick ="hitung(4,this.value),countdown(this.value)" type ="button" value="next" id ="tombol"></a>
           </form>		
       </section>
          <section id="soalkimia5" class="kimia">
-          
+          <p>you will be redirect to next question in <span id="counter5">10</span> second(s).</p>
           <form class ="left">
       
               <b>5. pada proses penyaringan air dengan pasir yang merupakan residu adalah ...</b>
@@ -103,11 +127,12 @@
                 <input onclick="Engine(5, this.value)"  type ="radio" name="kimia5" value ="pasir">  pasir<br>
                 <input onclick="Engine(5, this.value)" type="radio" name ="kimia5" value="tidak ada residu"/>  tidak ada residu<br />
                 <input onclick="Engine(5, this.value)"  type="radio" name="kimia5" value="pasir dan air" />  pasir dan air<br /><br>
-              <a href ="#soalkimia6"><input onclick ="hitung(5,this.value)" type ="button" value="next" id ="tombol"></a>
+              <a><input onclick ="hitung(5,this.value),countdown(this.value)" type ="button" value="next" id ="tombol"></a>
               
           </form>
       </section>
       <section id ="soalkimia6" class="kimia">
+          <p>you will be redirect to next question in <span id="counter6">10</span> second(s).</p>
           <form class ="left">
              
               <b>6. Materi yang bukan hasil penemuan manusia adalah...</b>
@@ -116,10 +141,11 @@
                 <input onclick="Engine(6, this.value)"  type ="radio" name="kimia6" value ="kertas">  kertas<br>
                 <input onclick="Engine(6, this.value)" type="radio" name ="kimia6" value="kantong plastik" />  kantong plastik<br />
                 <input onclick="Engine(6, this.value)"  type="radio" name="kimia6" value="udara" />udara<br/><br>
-              <a href ="#soalkimia7"><input onclick ="hitung(6,this.value)" type ="button" value="next" id ="tombol"></a>
+              <a><input onclick ="hitung(6,this.value),countdown(this.value)" type ="button" value="next" id ="tombol"></a>
           </form>		
       </section>
       <section id="soalkimia7" class="kimia">
+          <p>you will be redirect to next question in <span id="counter7">10</span> second(s).</p>
           <form class ="left">
              <div class="kiri">
               <img src="image/bahankorosif.png">
@@ -129,12 +155,13 @@
                     <input onclick="Engine(7, this.value)"  type ="radio" name="kimia7" value ="mudah terbakar"> mudah terbakar<br>
                     <input onclick="Engine(7, this.value)" type="radio" name ="kimia7" value="radioaktif" />  radioaktif<br />
                     <input onclick="Engine(7, this.value)"  type="radio" name="kimia7" value="beracun" />  beracun<br /><br>
-                  <a href ="#soalkimia8"><input onclick ="hitung(7,this.value)" type ="button" value="next" id ="tombol"></a>
+                  <a><input onclick ="hitung(7,this.value),countdown(this.value)" type ="button" value="next" id ="tombol"></a>
               </div>
             </div>
           </form>
       </section>
       <section id ="soalkimia8" class="kimia">
+          <p>you will be redirect to next question in <span id="counter8">10</span> second(s).</p>
           <form class ="left">
             
               <b>8. bahan yang bersifat mengilap,mudah di bentuk dan tidak berkarat adalah...</b>
@@ -143,7 +170,7 @@
                 <input onclick="Engine(8, this.value)"  type ="radio" name="kimia8" value ="aluminium">  aluminium<br>
                 <input onclick="Engine(8, this.value)" type="radio" name ="kimia8" value="besi" />  besi<br />
                 <input onclick="Engine(8, this.value)"  type="radio" name="kimia8" value="perak" />  perak<br /><br>
-              <a href ="#hasil"><input onclick ="hitung(8,this.value)" type ="button" value="next" id ="tombol"></a>
+              <a><input onclick ="hitung(8,this.value),countdown(this.value)" type ="button" value="next" id ="tombol"></a>
           </form>		
       </section>
         <section id ="hasil">
