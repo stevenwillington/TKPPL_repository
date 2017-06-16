@@ -31,11 +31,15 @@
                 if(simpan == jawabankimia[question])
                 {
                     score+=12.5;
+                    document.getElementById("audiobenar").play();
                     alert("anda benar\nscore anda :  "+score);
                     document.getElementById("score").innerHTML = score;
                 }
                 else
+                {
+                    document.getElementById("audiosalah").play();
                     alert("anda salah");
+                }
             }
             
         }
@@ -63,9 +67,11 @@
     </script>
   </head>
   <body>
-    <article>
+    <article id ="backkimia">
        
       <section id ="soalkimia1" class="kimia">
+          <audio id="audiobenar" src="sound/Correct.mp3" autostart="false" ></audio>
+          <audio id="audiosalah" src="sound/Wrong.mp3" autostart="false" ></audio>
           <p>you will be redirect to next question in <span id="counter1">10</span> second(s).</p>
           <form  class ="left">             
               <b>1. Zat yang tidak dapat diuraikan lagi menjadi zat yang lebih sederhana melalui reaksi kimia biasa disebut... </b>

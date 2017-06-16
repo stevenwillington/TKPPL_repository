@@ -31,11 +31,15 @@
                 if(simpan == jawabaninggris[question])
                 {
                     score+=12.5;
+                    document.getElementById("audiobenar").play();
                     alert("anda benar\nscore anda :  "+score);
                     document.getElementById("score").innerHTML = score;
                 }
                 else
+                {
+                    document.getElementById("audiosalah").play();
                     alert("anda salah");
+                }
             }
             
         }
@@ -64,9 +68,11 @@
     </script>     
   </head>
   <body>
-    <article>
+    <article id="backenglish">
        
       <section id ="soalinggris1" class="inggris">
+          <audio id="audiobenar" src="sound/Correct.mp3" autostart="false" ></audio>
+          <audio id="audiosalah" src="sound/Wrong.mp3" autostart="false" ></audio>
           <p>you will be redirect to next question in <span id="counter1">10</span> second(s).</p>
           <form  class ="left">             
               <b>1. she ......(buy) some books in Gramedia every week </b>
@@ -181,7 +187,8 @@
                 <a href="kimia.html">soal kimia</a>
             </div>
         </section>
-    </article>
+        </article>
+    
     <script src="build/build.js"></script>
       
   </body>

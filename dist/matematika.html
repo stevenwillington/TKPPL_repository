@@ -31,16 +31,21 @@
                 {
                     
                     score+=12.5;
+                    document.getElementById("audiobenar").play();
                     alert("anda benar\nscore anda :  "+score);
+                    
                     document.getElementById("score").innerHTML = score;
                 }
                 else
+                {
+                    document.getElementById("audiosalah").play();
                     alert("anda salah");
+                }
             }
         }
         var j =1;
         var k =2;
-        var time = 10;
+        var time = 35;
             function countdown(tanda) {
                 var i = document.getElementById('counter'+j);
                 
@@ -50,7 +55,7 @@
                         location.href ='#soal'+k;
                         k++;
                         j++;
-                        time =10;
+                        time =35;
                     }
                     else
                         location.href ='#hasil';
@@ -64,10 +69,12 @@
     </script>       
   </head>
   <body>
-    <article>
+    <article id="backmate">
        
       <section class ="matematika">
-          <p>you will be redirect to next question in <span id="counter1">10</span> second(s).</p>
+          <audio id="audiobenar" src="sound/Correct.mp3" autostart="false" ></audio>
+          <audio id="audiosalah" src="sound/Wrong.mp3" autostart="false" ></audio>
+          <p>you will be redirect to next question in <span id="counter1">35</span> second(s).</p>
           <form class ="left" >
               
               <b>1. hasil dari 50 + 20 = </b>
@@ -81,7 +88,7 @@
           </form>
       </section>
       <section id="soal2" class ="matematika">
-          <p>you will be redirect to next question in <span id="counter2">10</span> second(s).</p>
+          <p>you will be redirect to next question in <span id="counter2">35</span> second(s).</p>
           <form class ="left">
               
               <b>2. hasil dari 100 - 50 * 20 = </b>
@@ -94,7 +101,7 @@
           </form>		
       </section>
       <section id="soal3" class ="matematika">
-          <p>you will be redirect to next question in <span id="counter3">10</span> second(s).</p>
+          <p>you will be redirect to next question in <span id="counter3">35</span> second(s).</p>
           <form class ="left">
                 
               <b>3. hasil dari 200 :50 + 100 *10 / 2 =  </b>
@@ -107,7 +114,7 @@
           </form>
       </section>
       <section id ="soal4" class ="matematika">
-          <p>you will be redirect to next question in <span id="counter4">10</span> second(s).</p>
+          <p>you will be redirect to next question in <span id="counter4">35</span> second(s).</p>
           <form class ="left">
                 
               <b>4 . andi mempunyai mangga dan apel sebanyak 50 dan 75. andi ingin membagikannya sama rata kepada teman-temannya. berapa banyak teman yang mendapatkan buah tersebut?  </b>
@@ -120,7 +127,7 @@
           </form>		
       </section>
         <section id="soal5" class ="matematika">
-          <p>you will be redirect to next question in <span id="counter5">10</span> second(s).</p>
+          <p>you will be redirect to next question in <span id="counter5">35</span> second(s).</p>
           <form class ="left">
                 
               <b>5. di sebuah mall terdapat koper dengan harga 2000000 tetapi pada hari itu terdapat diskon sebesar 20% + 10%. jadi berapa harga koper itu sekarang? </b>
@@ -134,7 +141,7 @@
           </form>
       </section>
       <section id ="soal6" class ="matematika">
-          <p>you will be redirect to next question in <span id="counter6">10</span> second(s).</p>
+          <p>you will be redirect to next question in <span id="counter6">35</span> second(s).</p>
           <form class ="left">
              
               <b>6. hasil dari 1/2 * 25% - 10% =  </b>
@@ -147,7 +154,7 @@
           </form>		
       </section>
       <section id="soal7" class ="matematika">
-          <p>you will be redirect to next question in <span id="counter7">10</span> second(s).</p>
+          <p>you will be redirect to next question in <span id="counter7">35</span> second(s).</p>
           <form class ="left">
              
               <b>7. Jimmy ke tempat fitness setiap 2 hari sekali. Felix ke tempat fitness setiap 3 hari sekali dan Steven ke tempat fitness setiap 4 hari sekali. jika pada saat pertama ketemu tanggal 28 september 2015. kapan bertemu lagi?</b>
@@ -160,7 +167,7 @@
           </form>
       </section>
       <section id ="soal8" class ="matematika">
-          <p>you will be redirect to the result in <span id="counter8">10</span> second(s).</p>
+          <p>you will be redirect to the result in <span id="counter8">35</span> second(s).</p>
           <form class ="left">
                 
               <b>8. akar 3 dari 3375 adalah </b>

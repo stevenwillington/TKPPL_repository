@@ -31,17 +31,21 @@
                 if(simpan == jawabanfisika[question])
                 {
                     score+=12.5;
+                    document.getElementById("audiobenar").play();
                     alert("anda benar\nscore anda :  "+score);
                     document.getElementById("score").innerHTML = score;
                 }
                 else
+                {
+                    document.getElementById("audiosalah").play();
                     alert("anda salah");
+                }
             }
             
         }
          var j =1;
         var k =2;
-        var time = 10;
+        var time = 30;
             function countdown(tanda) {
                 var i = document.getElementById('counter'+j);
                 
@@ -63,9 +67,11 @@
     </script>
   </head>
   <body>
-    <article>
+    <article id="backfisika">
       <section class ="fisika">
-          <p>you will be redirect to next question in <span id="counter1">10</span> second(s).</p>
+          <audio id="audiobenar" src="sound/Correct.mp3" autostart="false" ></audio>
+          <audio id="audiosalah" src="sound/Wrong.mp3" autostart="false" ></audio>
+          <p>you will be redirect to next question in <span id="counter1">30</span> second(s).</p>
           <form class ="left" >             
               <b>1. Sebuah gelombang pada permukaan air dihasilkan dari suatu getaran yang frekuensinya 30 Hz. Jika jarak antara puncak dan lembah gelombang yang berturutan adalah 50 cm, hitunglah cepat rambat gelombang tersebut! </b>
               <br/>
@@ -80,7 +86,7 @@
       <section id="soalfisika2" class ="fisika">
           
           <form class ="left">
-              <p>you will be redirect to next question in <span id="counter2">10</span> second(s).</p>
+              <p>you will be redirect to next question in <span id="counter2">30</span> second(s).</p>
               <b>2. Sebuah pemancar radio bekerja pada gelombang 1,5 m. Jika cepat rambat gelombang radio 300 m/s, pada frekuensi berapakah stasion radio tersebut bekerja!  </b>
               <br/>
                 <input onclick="Engine(2, this.value)" type ="radio" name ="fisika2" value ="50 Mhz" >50 Mhz<br>
@@ -91,7 +97,7 @@
           </form>		
       </section>
       <section id="soalfisika3" class ="fisika">
-          <p>you will be redirect to next question in <span id="counter3">10</span> second(s).</p>
+          <p>you will be redirect to next question in <span id="counter3">30</span> second(s).</p>
           <form class ="left">
            
               <b>3. Periode suatu getaran adalah 1/2 detik. tentukan frekuensi getaran!</b>
@@ -104,7 +110,7 @@
           </form>
       </section>
       <section id ="soalfisika4" class ="fisika">
-          <p>you will be redirect to next question in <span id="counter4">10</span> second(s).</p>
+          <p>you will be redirect to next question in <span id="counter4">30</span> second(s).</p>
           <form class ="left">
            
               <b>4. Sebuah gelombang merambat dengan kecepatan 340 m/s. Jika frekuensi gelombang adalah 50 Hz, tentukan panjang gelombangnya! </b>
@@ -117,7 +123,7 @@
           </form>		
       </section>
         <section id="soalfisika5" class ="fisika">
-          <p>you will be redirect to next question in <span id="counter5">10</span> second(s).</p>
+          <p>you will be redirect to next question in <span id="counter5">30</span> second(s).</p>
           <form class ="left">
       
               <b>5. Seorang anak mengendarai sepeda dengan kecepatan 15 m/s, jika massa anak dan sepeda itu sebesar 10 kg, berarti energy kinetiknya sebesar ….</b>
@@ -131,7 +137,7 @@
           </form>
       </section>
       <section id ="soalfisika6" class ="fisika">
-          <p>you will be redirect to next question in <span id="counter6">10</span> second(s).</p>
+          <p>you will be redirect to next question in <span id="counter6">30</span> second(s).</p>
           <form class ="left">
              
               <b>6.Seorang anak berlari dengan kecepatan 10 m/s. Perubahan kedudukan anak tersebut selama 20 detik adalah ....</b>
@@ -144,7 +150,7 @@
           </form>		
       </section>
       <section id="soalfisika7" class ="fisika">
-          <p>you will be redirect to next question in <span id="counter7">10</span> second(s).</p>
+          <p>you will be redirect to next question in <span id="counter7">30</span> second(s).</p>
           <form class ="left">
              
               <b>7. Sebuah truk yang mula-mula diam, 5 detik kemudian kecepatannya menjadi 6 m/s. Percepatan truk tersebut adalah ....</b>
@@ -159,7 +165,7 @@
           </form>
       </section>
       <section id ="soalfisika8" class ="fisika">
-          <p>you will be redirect to next question in <span id="counter8">10</span> second(s).</p>
+          <p>you will be redirect to next question in <span id="counter8">30</span> second(s).</p>
           <form class ="left">
             
               <b>8. Sebuah mobil bergerak dengan kelajuan 80 km/jam. Jarak yang ditempuh mobil tersebut selama 30 menit sejauh ....</b>
