@@ -31,21 +31,47 @@
                 if(simpan == jawabanfisika[question])
                 {
                     score+=12.5;
+                    document.getElementById("audiobenar").play();
                     alert("anda benar\nscore anda :  "+score);
                     document.getElementById("score").innerHTML = score;
                 }
                 else
+                {
+                    document.getElementById("audiosalah").play();
                     alert("anda salah");
+                }
             }
             
         }
+         var j =1;
+        var k =2;
+        var time = 30;
+            function countdown(tanda) {
+                var i = document.getElementById('counter'+j);
+                
+                if (time==0 || tanda =="next") {
+                    if(k<9)
+                    {
+                        location.href ='#soalfisika'+k;
+                        k++;
+                        j++;
+                        time =10;
+                    }
+                    else
+                        location.href ='#hasil';
+                }
+                
+                i.innerHTML = time--;
+            }
+            var interval = setInterval(function(){ countdown(); },1000);
     </script>
   </head>
   <body>
-    <article>
-       
+    <article id="backfisika">
       <section class ="fisika">
-          
+          <audio id="audiobenar" src="sound/Correct.mp3" autostart="false" ></audio>
+          <audio id="audiosalah" src="sound/Wrong.mp3" autostart="false" ></audio>
+          <p>you will be redirect to next question in <span id="counter1">30</span> second(s).</p>
           <form class ="left" >             
               <b>1. Sebuah gelombang pada permukaan air dihasilkan dari suatu getaran yang frekuensinya 30 Hz. Jika jarak antara puncak dan lembah gelombang yang berturutan adalah 50 cm, hitunglah cepat rambat gelombang tersebut! </b>
               <br/>
@@ -53,23 +79,25 @@
                 <input onclick="Engine(1, this.value)"  type ="radio" name="fisika1" value ="15 m/s">15 m/s<br>
                 <input onclick="Engine(1, this.value)" type="radio" name ="fisika1" value="60 m/s" />60 m/s<br />
                 <input onclick="Engine(1, this.value)"  type="radio" name="fisika1" value="7,5 m/s" />7,5 m/s<br /><br>
-              <a href ="#soalfisika2"><input onclick ="hitung(1,this.value)" type ="button" value="next" id ="tombol"></a>
+              <a><input onclick ="hitung(1,this.value),countdown(this.value)" type ="button" value="next" id ="tombol"></a>
               
           </form>
       </section>
       <section id="soalfisika2" class ="fisika">
+          
           <form class ="left">
-              
+              <p>you will be redirect to next question in <span id="counter2">30</span> second(s).</p>
               <b>2. Sebuah pemancar radio bekerja pada gelombang 1,5 m. Jika cepat rambat gelombang radio 300 m/s, pada frekuensi berapakah stasion radio tersebut bekerja!  </b>
               <br/>
                 <input onclick="Engine(2, this.value)" type ="radio" name ="fisika2" value ="50 Mhz" >50 Mhz<br>
                 <input onclick="Engine(2, this.value)"  type ="radio" name="fisika2" value ="100 Mhz">100 Mhz<br>
                 <input onclick="Engine(2, this.value)" type="radio" name ="fisika2" value="200 Mhz" />200 Mhz<br />
                 <input onclick="Engine(2, this.value)"  type="radio" name="fisika2" value="250 Mhz" />250 Mhz<br /><br>
-              <a href ="#soalfisika3"><input onclick ="hitung(2,this.value)" type ="button" value="next" id ="tombol"></a>
+              <a><input onclick ="hitung(2,this.value),countdown(this.value)" type ="button" value="next" id ="tombol"></a>
           </form>		
       </section>
       <section id="soalfisika3" class ="fisika">
+          <p>you will be redirect to next question in <span id="counter3">30</span> second(s).</p>
           <form class ="left">
            
               <b>3. Periode suatu getaran adalah 1/2 detik. tentukan frekuensi getaran!</b>
@@ -78,10 +106,11 @@
                 <input onclick="Engine(3, this.value)"  type ="radio" name="fisika3" value ="1">1<br>
                 <input onclick="Engine(3, this.value)" type="radio" name ="fisika3" value="2" />2<br />
                 <input onclick="Engine(3, this.value)"  type="radio" name="fisika3" value="2,5" />2,5<br /><br>
-              <a href ="#soalfisika4"><input onclick ="hitung(3,this.value)" type ="button" value="next" id ="tombol"></a>
+              <a><input onclick ="hitung(3,this.value),countdown(this.value)" type ="button" value="next" id ="tombol"></a>
           </form>
       </section>
       <section id ="soalfisika4" class ="fisika">
+          <p>you will be redirect to next question in <span id="counter4">30</span> second(s).</p>
           <form class ="left">
            
               <b>4. Sebuah gelombang merambat dengan kecepatan 340 m/s. Jika frekuensi gelombang adalah 50 Hz, tentukan panjang gelombangnya! </b>
@@ -90,11 +119,11 @@
                 <input onclick="Engine(4, this.value)"  type ="radio" name="fisika4" value ="6,7">6,7<br>
                 <input onclick="Engine(4, this.value)" type="radio" name ="fisika4" value="6,6" />6,6<br />
                 <input onclick="Engine(4, this.value)"  type="radio" name="fisika4" value="6,5" />6,5<br/><br>
-              <a href ="#soalfisika5"><input onclick ="hitung(4,this.value)" type ="button" value="next" id ="tombol"></a>
+              <a><input onclick ="hitung(4,this.value),countdown(this.value)" type ="button" value="next" id ="tombol"></a>
           </form>		
       </section>
         <section id="soalfisika5" class ="fisika">
-          
+          <p>you will be redirect to next question in <span id="counter5">30</span> second(s).</p>
           <form class ="left">
       
               <b>5. Seorang anak mengendarai sepeda dengan kecepatan 15 m/s, jika massa anak dan sepeda itu sebesar 10 kg, berarti energy kinetiknya sebesar ….</b>
@@ -103,11 +132,12 @@
                 <input onclick="Engine(5, this.value)"  type ="radio" name="fisika5" value ="950 J"> 950 J<br>
                 <input onclick="Engine(5, this.value)" type="radio" name ="fisika5" value="1125 J"/> 1125 J<br />
                 <input onclick="Engine(5, this.value)"  type="radio" name="fisika5" value="1800 J" />  1800 J<br /><br>
-              <a href ="#soalfisika6"><input onclick ="hitung(5,this.value)" type ="button" value="next" id ="tombol"></a>
+              <a><input onclick ="hitung(5,this.value),countdown(this.value)" type ="button" value="next" id ="tombol"></a>
               
           </form>
       </section>
       <section id ="soalfisika6" class ="fisika">
+          <p>you will be redirect to next question in <span id="counter6">30</span> second(s).</p>
           <form class ="left">
              
               <b>6.Seorang anak berlari dengan kecepatan 10 m/s. Perubahan kedudukan anak tersebut selama 20 detik adalah ....</b>
@@ -116,10 +146,11 @@
                 <input onclick="Engine(6, this.value)"  type ="radio" name="fisika6" value ="100 meter">  100 meter<br>
                 <input onclick="Engine(6, this.value)" type="radio" name ="fisika6" value="150 meter" />  150 meter<br />
                 <input onclick="Engine(6, this.value)"  type="radio" name="fisika6" value="200 meter" />  200 meter<br/><br>
-              <a href ="#soalfisika7"><input onclick ="hitung(6,this.value)" type ="button" value="next" id ="tombol"></a>
+              <a><input onclick ="hitung(6,this.value),countdown(this.value)" type ="button" value="next" id ="tombol"></a>
           </form>		
       </section>
       <section id="soalfisika7" class ="fisika">
+          <p>you will be redirect to next question in <span id="counter7">30</span> second(s).</p>
           <form class ="left">
              
               <b>7. Sebuah truk yang mula-mula diam, 5 detik kemudian kecepatannya menjadi 6 m/s. Percepatan truk tersebut adalah ....</b>
@@ -129,11 +160,12 @@
                 <input onclick="Engine(7, this.value)" type="radio" name ="fisika7" value ="5" />  5<br />
                 <input onclick="Engine(7, this.value)"  type="radio" name="fisika7" value="30" />  30<br>
               <br>
-              <a href ="#soalfisika8"><input onclick ="hitung(7,this.value)" type ="button" value="next" id ="tombol"></a>
+              <a><input onclick ="hitung(7,this.value),countdown(this.value)" type ="button" value="next" id ="tombol"></a>
               <br>
           </form>
       </section>
       <section id ="soalfisika8" class ="fisika">
+          <p>you will be redirect to next question in <span id="counter8">30</span> second(s).</p>
           <form class ="left">
             
               <b>8. Sebuah mobil bergerak dengan kelajuan 80 km/jam. Jarak yang ditempuh mobil tersebut selama 30 menit sejauh ....</b>
@@ -142,14 +174,19 @@
                 <input onclick="Engine(8, this.value)"  type ="radio" name="fisika8" value ="45 km">  45 km<br>
                 <input onclick="Engine(8, this.value)" type="radio" name ="fisika8" value="50 km" />  50 km<br />
                 <input onclick="Engine(8, this.value)"  type="radio" name="fisika8" value="60 km" />  60 km<br /><br>
-              <a href ="#hasil"><input onclick ="hitung(8,this.value)" type ="button" value="next" id ="tombol"></a>
+              <a><input onclick ="hitung(8,this.value),countdown(this.value)" type ="button" value="next" id ="tombol"></a>
           </form>		
       </section>
      <section id ="hasil">
             <b>Score Anda : </b>
            <div id="score">0</div>
+            <br>
+            <div id="menubawah">
+                <a href="matematika.html">soal matematika</a>
+                <a href="inggris.html">soal english</a>
+                <a href="kimia.html">soal kimia</a>
+            </div>
         </section>
-      
     </article>
     <script src="build/build.js"></script>
       

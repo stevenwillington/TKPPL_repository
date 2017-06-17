@@ -31,25 +31,49 @@
                 if(simpan == jawabaninggris[question])
                 {
                     score+=12.5;
+                    document.getElementById("audiobenar").play();
                     alert("anda benar\nscore anda :  "+score);
                     document.getElementById("score").innerHTML = score;
                 }
                 else
+                {
+                    document.getElementById("audiosalah").play();
                     alert("anda salah");
+                }
             }
             
         }
-    </script>
-      
+         var j =1;
+        var k =2;
+        var time = 10;
+            function countdown(tanda) {
+                var i = document.getElementById('counter'+j);
+                
+                if (time==0 || tanda =="next") {
+                    if(k<9)
+                    {
+                        location.href ='#soalinggris'+k;
+                        k++;
+                        j++;
+                        time =10;
+                    }
+                    else
+                        location.href ='#hasil';
+                }
+                
+                i.innerHTML = time--;
+            }
+            var interval = setInterval(function(){ countdown(); },1000);
        
-    
-       
+    </script>     
   </head>
   <body>
-    <article>
+    <article id="backenglish">
        
       <section id ="soalinggris1" class="inggris">
-          
+          <audio id="audiobenar" src="sound/Correct.mp3" autostart="false" ></audio>
+          <audio id="audiosalah" src="sound/Wrong.mp3" autostart="false" ></audio>
+          <p>you will be redirect to next question in <span id="counter1">10</span> second(s).</p>
           <form  class ="left">             
               <b>1. she ......(buy) some books in Gramedia every week </b>
               <br/>
@@ -57,11 +81,12 @@
                 <input onclick="Engine(1, this.value)"  type ="radio" name="inggris1" value ="buys">buys<br>
                 <input onclick="Engine(1, this.value)" type="radio" name ="inggris1" value="bought" />bought<br />
                 <input onclick="Engine(1, this.value)"  type="radio" name="inggris1" value="is buying" />is buying<br /><br>
-              <a href ="#soalinggris2"><input onclick ="hitung(1,this.value)" type ="button" value="next" id ="tombol"></a>
+              <a><input onclick ="hitung(1,this.value),countdown(this.value)" type ="button" value="next" id ="tombol"></a>
               
           </form>
       </section>
       <section id="soalinggris2" class="inggris">
+          <p>you will be redirect to next question in <span id="counter2">10</span> second(s).</p>
           <form class ="left">
               
               <b>2. I and Tommy ......(walk) in the park yesterday.  </b>
@@ -70,48 +95,51 @@
                 <input onclick="Engine(2, this.value)"  type ="radio" name="inggris2" value ="are walking">are walking<br>
                 <input onclick="Engine(2, this.value)" type="radio" name ="inggris2" value="walked" />walked<br />
                 <input onclick="Engine(2, this.value)"  type="radio" name="inggris2" value="were walking" />were walking<br /><br>
-              <a href ="#soalinggris3"><input onclick ="hitung(2,this.value)" type ="button" value="next" id ="tombol"></a>
+             <a><input onclick ="hitung(2,this.value),countdown(this.value)" type ="button" value="next" id ="tombol"></a>
           </form>		
       </section>
       <section id="soalinggris3" class="inggris">
-          <form class ="left">
-           
+              <p>you will be redirect to next question in <span id="counter3">10</span> second(s).</p>
+              <form class ="left">
+                
               <b>3. They .......(go) to Bali next year.</b>
               <br/>
                 <input onclick="Engine(3, this.value)" type ="radio" name ="inggris3" value ="will go" >will go<br>
                 <input onclick="Engine(3, this.value)"  type ="radio" name="inggris3" value ="went">went<br>
                 <input onclick="Engine(3, this.value)" type="radio" name ="inggris3" value="are going" />are going<br />
                 <input onclick="Engine(3, this.value)"  type="radio" name="inggris3" value="gone" />gone<br /><br>
-              <a href ="#soalinggris4"><input onclick ="hitung(3,this.value)" type ="button" value="next" id ="tombol"></a>
+              <a><input onclick ="hitung(3,this.value),countdown(this.value)" type ="button" value="next" id ="tombol"></a>
           </form>
       </section>
       <section id ="soalinggris4" class="inggris">
+          <p>you will be redirect to next question in <span id="counter4">10</span> second(s).</p>
           <form class ="left">
-           
+                
               <b>4. when you .......(come) , I..........(cook) in the kitchen. </b>
               <br/>
                 <input onclick="Engine(4, this.value)" type ="radio" name ="inggris4" value ="come,cooked" >come,cooked<br>
                 <input onclick="Engine(4, this.value)"  type ="radio" name="inggris4" value ="came,cooked">came,cooked<br>
                 <input onclick="Engine(4, this.value)" type="radio" name ="inggris4" value="came,am cooking" />came,am cooking<br />
                 <input onclick="Engine(4, this.value)"  type="radio" name="inggris4" value="are coming,cooked" />are coming,cooked<br /><br>
-              <a href ="#soalinggris5"><input onclick ="hitung(4,this.value)" type ="button" value="next" id ="tombol"></a>
+              <a><input onclick ="hitung(4,this.value),countdown(this.value)" type ="button" value="next" id ="tombol"></a>
           </form>		
       </section>
         <section id="soalinggris5" class="inggris">
-          
+          <p>you will be redirect to next question in <span id="counter5">10</span> second(s).</p>
           <form class ="left">
-      
+                
               <b>5. Jimmy and Tommy .......(play) while Steven.......(go)</b>
               <br/>
                 <input onclick="Engine(5, this.value)" type ="radio" name ="inggris5" value ="play,go" >play,go<br>
                 <input onclick="Engine(5, this.value)"  type ="radio" name="inggris5" value ="played,went">played,went<br>
                 <input onclick="Engine(5, this.value)" type="radio" name ="inggris5" value="are playing,went"/>are playing,went<br />
                 <input onclick="Engine(5, this.value)"  type="radio" name="inggris5" value="played, is going" />played, is going<br /><br>
-              <a href ="#soalinggris6"><input onclick ="hitung(5,this.value)" type ="button" value="next" id ="tombol"></a>
+              <a><input onclick ="hitung(5,this.value),countdown(this.value)" type ="button" value="next" id ="tombol"></a>
               
           </form>
       </section>
       <section id ="soalinggris6" class="inggris">
+          <p>you will be redirect to next question in <span id="counter6">10</span> second(s).</p>
           <form class ="left">
              
               <b>6. She ......(drink) three bottles of wine, she must be get headache now</b>
@@ -120,40 +148,47 @@
                 <input onclick="Engine(6, this.value)"  type ="radio" name="inggris6" value ="drank">drank<br>
                 <input onclick="Engine(6, this.value)" type="radio" name ="inggris6" value="is drinking" />is drinking<br />
                 <input onclick="Engine(6, this.value)"  type="radio" name="inggris6" value="drunk" />drunk<br/><br>
-              <a href ="#soalinggris7"><input onclick ="hitung(6,this.value)" type ="button" value="next" id ="tombol"></a>
+              <a><input onclick ="hitung(6,this.value),countdown(this.value)" type ="button" value="next" id ="tombol"></a>
           </form>		
       </section>
       <section id="soalinggris7" class="inggris">
+          <p>you will be redirect to next question in <span id="counter7">10</span> second(s).</p>
           <form class ="left">
-             
+                
               <b>7. I don’t bring my hand phone since it .........(repair)</b>
               <br/>
                 <input onclick="Engine(7, this.value)" type ="radio" name ="inggris7" value ="repaired" >repaired<br>
                 <input onclick="Engine(7, this.value)"  type ="radio" name="inggris7" value ="is being repaired">is being repaired<br>
                 <input onclick="Engine(7, this.value)" type="radio" name ="inggris7" value="was repaired" />was repaired<br />
                 <input onclick="Engine(7, this.value)"  type="radio" name="inggris7" value="was being repaired" />was being repaired<br /><br>
-              <a href ="#soalinggris8"><input onclick ="hitung(7,this.value)" type ="button" value="next" id ="tombol"></a>
+              <a><input onclick ="hitung(7,this.value),countdown(this.value)" type ="button" value="next" id ="tombol"></a>
           </form>
       </section>
       <section id ="soalinggris8" class="inggris">
+          <p>you will be redirect to next question in <span id="counter8">10</span> second(s).</p>
           <form class ="left">
-            
+                
               <b>8. I .......(sleep) when the car crashed my home last night.</b>
               <br/>
                 <input onclick="Engine(8, this.value)" type ="radio" name ="inggris8" value ="was sleeping" >was sleeping<br>
                 <input onclick="Engine(8, this.value)"  type ="radio" name="inggris8" value ="slept">slept<br>
                 <input onclick="Engine(8, this.value)" type="radio" name ="inggris8" value="was slept" />was slept<br />
                 <input onclick="Engine(8, this.value)"  type="radio" name="inggris8" value="am sleeping" />am sleeping<br /><br>
-              <a href ="#hasil"><input onclick ="hitung(8,this.value)" type ="button" value="next" id ="tombol"></a>
+              <a><input onclick ="hitung(8,this.value),countdown(this.value)" type ="button" value="next" id ="tombol"></a>
           </form>		
       </section>
         <section id ="hasil">
             <b>Score Anda : </b>
            <div id="score">0</div>
+            <br>
+            <div id="menubawah">
+                <a href="matematika.html">soal matematika</a>
+                <a href="fisika.html">soal fisika</a>
+                <a href="kimia.html">soal kimia</a>
+            </div>
         </section>
-        
-      
-    </article>
+        </article>
+    
     <script src="build/build.js"></script>
       
   </body>

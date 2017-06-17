@@ -1,7 +1,6 @@
 
 .left
 {
-    
     text-align: left;
     padding: 30px;
     width: 500px;
@@ -10,9 +9,8 @@
 
 section#kategori
 {
-    background-image: url(image/backgroundmenu.png);
+    background-image: url(image/background_menu_pelajaran.jpg);
     background-position: -50px -100px;
-    
 }
 section#kategori a
 {
@@ -22,26 +20,41 @@ section#kategori a
     background-color: blueviolet;
     color: greenyellow;
     border-radius: 10px;
-    
 }
 section#kategori a:hover
 {
     background-color: greenyellow;
     color: RED;
-    
 }
 .matematika
 {
-    background-image: url(image/backgroundmate.jpg);
-    background-size: 650px;
+    background-color: transparent;
     color : darkblue;
 }
 .matematika b
 {
     font-size: 25px;
-    color :aqua;
+    color :mediumvioletred;
 }
-
+#kelompok
+{
+    background-image: url(image/background_menu_utama.jpg);
+    background-size: 500px;
+}
+#kelompok h2
+{
+    color: chartreuse;
+}
+#kelompok h3
+{
+    border-color: aqua;
+    color: white;
+    font-weight: 600;
+}
+#kelompok p
+{
+    color :yellow;
+}
 .matematika a input
 {
     background-color: salmon;
@@ -54,17 +67,18 @@ section#kategori a:hover
 {
     background-color: green;
     color: pink;   
+
 }
 .fisika
 {
-    background-image: url(image/backgroundfisika.png);
-    background-size: 500px;
-    color: purple;
+    background-color: transparent;
+    color:orange;
+    font-weight: 900;
 }
 .fisika b
 {
-    color :aqua;
-    font-size: 20px;
+    color : mediumvioletred;
+    font-size: 25px;
 }
 .fisika a input
 {
@@ -72,19 +86,17 @@ section#kategori a:hover
     padding: 5px;
     width: 100px;
     margin-left: 170px;
-    color: red;
+    color: aqua
 }
 .fisika a input:hover
 {
     background-color: blue;
     color: pink;
-    border: 50px;
 }
 .inggris
 {
-    background-image: url(image/backgroundenglish.jpg);
-    background-size: 600px;
-    color : chocolate;
+    background-color: transparent;
+    color : yellow;
 }
 .inggris b
 {
@@ -107,8 +119,98 @@ section#kategori a:hover
 }
 #hasil
 {
-    background-image: url(image/score.jpg);
-    background-size: 630px;
-    color: greenyellow;
+    background-image: url(image/background_hasil.jpg);
+    background-size: cover;
+    color: yellow;
 }
-
+#menubawah
+{
+    margin-top: 100px;
+    width: 500px;
+    
+}
+#menubawah a
+{
+    padding: 10px;
+    background-color: greenyellow;
+    margin-left: 40px;
+    width: 120px;
+    float: left;
+    color: aliceblue;
+    border-radius: 10px;
+}
+#menubawah a:hover
+{
+    background-color: chartreuse;
+    color: crimson;
+    
+}
+img
+{
+    float: left;
+    width: 100px;
+}
+.kiri
+{
+    float: left;
+}
+.kiri p
+{
+    padding: 0;
+    margin-left: 120px;
+}
+.kanan
+{
+    float: left;
+    margin-left: 20px;
+}
+.kimia
+{
+    background-color: transparent;
+    background-size: 530px;
+    color: greenyellow;
+    font-weight: 700;
+}
+.kimia b,.kimia p
+{
+    color :yellow;
+    font-size: 20px;
+}
+.kimia a input
+{
+    background-color: yellowgreen;
+    padding: 5px;
+    width: 100px;
+    margin-left: 170px;
+    color: white;
+}
+.kimia a input:hover
+{
+    background-color: tomato;
+    color: darkturquoise;
+}
+article#backmate
+{
+    background-image: url(image/backgroundmate.jpg);
+    background-size: 900px;   
+}
+article#backenglish
+{
+    background-image: url(image/backgroundenglish.jpg);
+    background-size: contain;
+}
+article#backfisika
+{
+    background-image: url(image/backgroundfisika.jpg);
+    background-size: cover;
+}
+article#backkimia
+{
+    background-image: url(image/backgroundkimia.jpg);
+    background-size: cover;
+    background-position: 200px 0px
+}
+article#utama
+{
+    background-image: url(image/backgroundbiru.jpg);
+}
