@@ -8,7 +8,7 @@
     <script>
         var tampungjawaban = new Array;
         score = 0;
-        
+        var highscore =0;
         tampungjawaban[1] = "70";
         tampungjawaban[2] = "-900";
         tampungjawaban[3] = "504";
@@ -17,7 +17,6 @@
         tampungjawaban[6] = "0,025";
         tampungjawaban[7] = "10 oktober";
         tampungjawaban[8] = "15";
-        
         function Engine(question,answer)
         {
             simpan = answer;
@@ -42,6 +41,7 @@
                     alert("anda salah");
                 }
             }
+            
         }
         var j =1;
         var k =2;
@@ -180,6 +180,8 @@
           </form>		
       </section>
         <section id ="hasil">
+            <b>High Score :</b>
+            <div id ="highscore">0</div>
             <b>Score Anda : </b>
            <div id="score">0</div>
             <br>
